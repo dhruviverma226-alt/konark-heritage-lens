@@ -39,6 +39,12 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        heritage: {
+          gold: "hsl(var(--heritage-gold))",
+          bronze: "hsl(var(--heritage-bronze))",
+          stone: "hsl(var(--heritage-stone))",
+          glow: "hsl(var(--primary-glow))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -80,10 +86,33 @@ export default {
             height: "0",
           },
         },
+        "heritage-glow": {
+          "0%, 100%": {
+            boxShadow: "0 10px 30px -10px hsl(var(--primary) / 0.3)",
+          },
+          "50%": {
+            boxShadow: "0 20px 50px -15px hsl(var(--heritage-bronze) / 0.4)",
+          },
+        },
+        "temple-rise": {
+          from: {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "heritage-glow": "heritage-glow 3s ease-in-out infinite alternate",
+        "temple-rise": "temple-rise 1s ease-out forwards",
+      },
+      fontFamily: {
+        heritage: ['Crimson Text', 'serif'],
       },
     },
   },

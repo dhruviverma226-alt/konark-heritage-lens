@@ -2,39 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Heritage-inspired design system for Digitalधरोहर
+All colors MUST be HSL for perfect theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 35 25% 96%;
+    --foreground: 25 35% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 30% 98%;
+    --card-foreground: 25 35% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 30% 98%;
+    --popover-foreground: 25 35% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Heritage saffron and gold palette */
+    --primary: 25 85% 45%;
+    --primary-foreground: 35 25% 96%;
+    --primary-glow: 35 90% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 35 40% 92%;
+    --secondary-foreground: 25 35% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 25% 90%;
+    --muted-foreground: 25 20% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 35 75% 55%;
+    --accent-foreground: 35 25% 96%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --heritage-gold: 45 95% 50%;
+    --heritage-bronze: 25 45% 35%;
+    --heritage-stone: 35 15% 85%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 35 25% 96%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 90%;
+    --ring: 25 85% 45%;
+
+    /* Heritage gradients */
+    --gradient-heritage: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--heritage-gold)));
+    --gradient-temple: linear-gradient(180deg, hsl(var(--heritage-bronze)), hsl(var(--primary)));
+    --gradient-sunrise: linear-gradient(45deg, hsl(35 95% 70%), hsl(25 85% 55%));
+    
+    /* Heritage shadows */
+    --shadow-heritage: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-temple: 0 20px 50px -15px hsl(var(--heritage-bronze) / 0.4);
+    
+    /* Animations */
+    --transition-heritage: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -56,33 +74,47 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 25 25% 8%;
+    --foreground: 35 25% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 30% 10%;
+    --card-foreground: 35 25% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 30% 10%;
+    --popover-foreground: 35 25% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 35 90% 65%;
+    --primary-foreground: 25 25% 8%;
+    --primary-glow: 35 95% 70%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 25 20% 15%;
+    --secondary-foreground: 35 25% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 25 15% 12%;
+    --muted-foreground: 35 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 35 80% 60%;
+    --accent-foreground: 25 25% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --heritage-gold: 45 90% 60%;
+    --heritage-bronze: 25 40% 40%;
+    --heritage-stone: 25 10% 20%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 35 25% 96%;
+
+    --border: 25 15% 20%;
+    --input: 25 15% 15%;
+    --ring: 35 90% 65%;
+
+    /* Dark mode gradients */
+    --gradient-heritage: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--heritage-gold)));
+    --gradient-temple: linear-gradient(180deg, hsl(var(--heritage-bronze)), hsl(var(--primary)));
+    --gradient-sunrise: linear-gradient(45deg, hsl(35 80% 50%), hsl(25 75% 45%));
+    
+    /* Dark shadows */
+    --shadow-heritage: 0 10px 30px -10px hsl(var(--primary) / 0.4);
+    --shadow-temple: 0 20px 50px -15px hsl(var(--heritage-bronze) / 0.5);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +132,62 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Heritage typography */
+  .font-heritage {
+    font-family: 'Crimson Text', serif;
+  }
+  
+  .text-heritage-gradient {
+    background: var(--gradient-heritage);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer components {
+  /* Heritage animations */
+  .animate-heritage-glow {
+    animation: heritage-glow 3s ease-in-out infinite alternate;
+  }
+  
+  .animate-temple-rise {
+    animation: temple-rise 1s ease-out forwards;
+  }
+  
+  @keyframes heritage-glow {
+    from {
+      box-shadow: var(--shadow-heritage);
+    }
+    to {
+      box-shadow: var(--shadow-temple);
+    }
+  }
+  
+  @keyframes temple-rise {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Heritage backgrounds */
+  .bg-heritage-gradient {
+    background: var(--gradient-heritage);
+  }
+  
+  .bg-temple-gradient {
+    background: var(--gradient-temple);
+  }
+  
+  .bg-sunrise-gradient {
+    background: var(--gradient-sunrise);
   }
 }
