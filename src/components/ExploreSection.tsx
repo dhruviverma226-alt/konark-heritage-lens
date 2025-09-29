@@ -1,6 +1,12 @@
 import { MapPin, Clock, Camera } from "lucide-react"
 import { HeritageButton } from "@/components/ui/heritage-button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import jagannathTemple from "@/assets/jagannath-temple.jpg"
+import lingarajTemple from "@/assets/lingaraj-temple.jpg"
+import udayagiriCaves from "@/assets/udayagiri-caves.jpg"
+import rajaraniTemple from "@/assets/rajarani-temple.jpg"
+import dhauliPagoda from "@/assets/dhauli-pagoda.jpg"
+import chilikaLake from "@/assets/chilika-lake.jpg"
 
 export const ExploreSection = () => {
   const heritageSites = [
@@ -9,7 +15,7 @@ export const ExploreSection = () => {
       location: "Puri, Odisha",
       period: "12th Century",
       description: "Sacred temple dedicated to Lord Jagannath, famous for the annual Rath Yatra festival.",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+      image: jagannathTemple,
       distance: "65 km"
     },
     {
@@ -17,7 +23,7 @@ export const ExploreSection = () => {
       location: "Bhubaneswar, Odisha",
       period: "11th Century",
       description: "Magnificent temple dedicated to Lord Shiva, showcasing Kalinga architecture.",
-      image: "https://images.unsplash.com/photo-1609920658906-8223bd289001?w=400",
+      image: lingarajTemple,
       distance: "35 km"
     },
     {
@@ -25,7 +31,7 @@ export const ExploreSection = () => {
       location: "Bhubaneswar, Odisha",
       period: "1st-2nd Century",
       description: "Ancient rock-cut caves with intricate Jain and Buddhist sculptures.",
-      image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400",
+      image: udayagiriCaves,
       distance: "40 km"
     },
     {
@@ -33,7 +39,7 @@ export const ExploreSection = () => {
       location: "Bhubaneswar, Odisha",
       period: "11th Century",
       description: "Temple of Love known for its exquisite sculptural art and architectural beauty.",
-      image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=400",
+      image: rajaraniTemple,
       distance: "38 km"
     },
     {
@@ -41,7 +47,7 @@ export const ExploreSection = () => {
       location: "Bhubaneswar, Odisha",
       period: "Modern (Buddhist Site)",
       description: "Peace pagoda built where Emperor Ashoka embraced Buddhism after Kalinga War.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
+      image: dhauliPagoda,
       distance: "42 km"
     },
     {
@@ -49,7 +55,7 @@ export const ExploreSection = () => {
       location: "Odisha",
       period: "Natural Heritage",
       description: "Asia's largest brackish water lagoon, home to diverse flora and fauna.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
+      image: chilikaLake,
       distance: "50 km"
     }
   ]

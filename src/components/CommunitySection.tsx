@@ -4,6 +4,12 @@ import { HeritageButton } from "@/components/ui/heritage-button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Textarea } from "@/components/ui/textarea"
+import userAvatar1 from "@/assets/user-avatar-1.jpg"
+import userAvatar2 from "@/assets/user-avatar-2.jpg"
+import userAvatar3 from "@/assets/user-avatar-3.jpg"
+import konarkTemple from "@/assets/konark-temple-hero.jpg"
+import lingarajTemple from "@/assets/lingaraj-temple.jpg"
+import udayagiriCaves from "@/assets/udayagiri-caves.jpg"
 
 export const CommunitySection = () => {
   const [newPost, setNewPost] = useState("")
@@ -13,13 +19,13 @@ export const CommunitySection = () => {
       id: 1,
       user: {
         name: "Priya Sharma",
-        avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100",
+        avatar: userAvatar1,
         badge: "Heritage Explorer"
       },
       location: "Konark Temple, Odisha",
       time: "2 hours ago",
       content: "Just visited the magnificent Konark Temple! The intricate wheel carvings are absolutely breathtaking. The morning light creates such beautiful shadows on the stone sculptures.",
-      images: ["https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500"],
+      images: [konarkTemple],
       likes: 24,
       comments: 8,
       isLiked: false
@@ -28,7 +34,7 @@ export const CommunitySection = () => {
       id: 2,
       user: {
         name: "Rajesh Kumar",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100",
+        avatar: userAvatar2,
         badge: "Monument Guardian"
       },
       location: "Jagannath Temple, Puri",
@@ -43,15 +49,15 @@ export const CommunitySection = () => {
       id: 3,
       user: {
         name: "Meera Patel",
-        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100",
+        avatar: userAvatar3,
         badge: "Cultural Preservationist"
       },
       location: "Lingaraj Temple, Bhubaneswar",
       time: "3 days ago",
       content: "Documenting the restoration work at Lingaraj Temple. It's inspiring to see how traditional craftsmen are preserving these ancient techniques for future generations.",
       images: [
-        "https://images.unsplash.com/photo-1609920658906-8223bd289001?w=500",
-        "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=500"
+        lingarajTemple,
+        udayagiriCaves
       ],
       likes: 67,
       comments: 15,

@@ -5,12 +5,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import userAvatar1 from "@/assets/user-avatar-1.jpg"
 
 export const ProfileSection = () => {
   const user = {
     name: "Priya Sharma",
     email: "priya.sharma@example.com",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200",
+    avatar: userAvatar1,
     joinDate: "March 2024",
     location: "Bhubaneswar, Odisha",
     bio: "Heritage enthusiast and cultural preservationist passionate about documenting India's architectural marvels."
